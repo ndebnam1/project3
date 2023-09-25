@@ -15,6 +15,7 @@ class TableTemplate {
         //First looping through each row/tr
         for(var i = 0,row;row = table.rows[i];i++)
         {
+
             //then looping through the cells(dt) in each row
            for(var j = 0,col;col = row.cells[j];j++)
            {
@@ -22,15 +23,27 @@ class TableTemplate {
                for(const [key,value] of entries)
                {
                    const lookup =  `{{${key}}}`;
-                   if(col.text === lookup)
+                   if(col.innerHTML === lookup && colName === undefined)
                    {
-                       col.text.replace(lookup,value)
+                       col.innerHTML = value;
+                   }
+                   else if(i === 0){
+                       if(col.innerHTML === lookup){
+                           col.innerHTML = value;
+                           if(col.innerHTML === colName){
+                              var colIndex = j
+                           }
+                       }
+                   }
+                   else if(col.innerHTML === lookup && j === colIndex)
+                   {
+                       col.innerHTML = value;
                    }
                    //Side Note: This should work in theory I have no idea how to use the ColName because there is no ID in the html
-
                }
            }
         }
+        table.style.visibility = "visible";
     }
 }
 
