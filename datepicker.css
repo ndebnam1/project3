@@ -1,0 +1,70 @@
+/* Styling for the date picker container */
+.datepicker-container {
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    max-width: 300px;
+  }
+  
+  /* Styling for the header containing controls and month/year display */
+  .datepicker-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Styling for the month/year display */
+  .month-year {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Styling for the table containing the calendar */
+  .datepicker-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  /* Styling for the table header (day abbreviations) */
+  .datepicker-table th {
+    padding: 8px;
+    font-weight: bold;
+  }
+  
+  /* Styling for each cell in the calendar */
+  .datepicker-table td {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  /* Styling for the selected date cell */
+  .selected-date {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+  }
+  
+  /* Styling for days from the previous month */
+  .prev-month {
+    color: #ccc;
+  }
+  
+  /* Styling for days from the next month */
+  .next-month {
+    color: #ccc;
+  }
+  
+  /* Styling for the control buttons */
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
